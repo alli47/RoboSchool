@@ -69,5 +69,9 @@
     &--next {
       background-image: url("../img/next.svg");
     }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 }
