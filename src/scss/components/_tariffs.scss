@@ -1,10 +1,22 @@
 .tariffs {
   padding-top: 0;
 
+  @include mobile {
+    padding-bottom: 60px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 40px;
+
+    @include high-tablet {
+      gap: 15px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
   }
 
   &__item {
@@ -16,6 +28,10 @@
     border-radius: 20px;
     padding: 40px;
     margin: 20px 0;
+
+    @include mobile {
+      margin: 10px 0;
+    }
 
 
 
@@ -33,6 +49,22 @@
       .tariffs__descr {
         color: var(--light-color);
       }
+
+      @include high-desktop {
+        transform: scale(1.04);
+      }
+
+      @include high-tablet {
+        transform: scale(1.02);
+      }
+
+      @include small-tablet {
+        transform: scale(1);
+      }
+    }
+
+    @include small-tablet {
+      grid-column: 8 span;
     }
   }
 
@@ -73,7 +105,15 @@
     line-height: 160%;
     margin-bottom: 20px;
     text-align: center;
-    color: var(--dark-color)
+    color: var(--dark-color);
+
+    @include high-desktop {
+      font-size: 45px;
+    }
+
+    @include high-tablet {
+      font-size: 32px;
+    }
   }
 
   &__descr {
@@ -83,11 +123,22 @@
     font-size: 18px;
     line-height: 160%;
     text-align: center;
-    color: var(--dark-color)
+    color: var(--dark-color);
+
+
+    @include high-tablet {
+      font-size: 14px;
+    }
   }
 
   &__btn {
     margin-top: 60px;
     min-width: 100%;
+
+
+    @include high-tablet {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
   }
 }

@@ -1,0 +1,191 @@
+.graph-modal__close {
+  right: 40px;
+  top: 40px;
+  width: auto;
+  height: auto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--text-color);
+
+  @include small-tablet{
+    right: 10px;
+    top: 10px;
+  }
+
+  @include mobile {
+    display: block;
+    position: absolute;
+    font-size: 0;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/svg/close.svg");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+  }
+
+}
+
+.graph-modal {
+  &::before {
+    @include tablet{
+      display: none;
+    }
+  }
+}
+
+.popup {
+  padding: 40px;
+  width: 100%;
+  max-width: 940px;
+
+  @include mobile {
+    padding: 33px 20px;
+  }
+  // max-height: 768px;
+
+  &__top {
+    display: flex;
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image {
+    margin-right: 40px;
+
+    @include mobile {
+      width: 64px;
+      margin-right: 10px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    color: var(--dark-color);
+
+    @include mobile {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+  }
+
+  &__post {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--text-color);
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 140%;
+    }
+  }
+
+  &__bottom-content {
+    margin-top: 20px;
+    max-height: 375px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: var(--dark-color);
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    color: var(--dark-color);
+  }
+
+  .simplebar-track.simplebar-vertical {
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 5px;
+    background: rgba(20, 16, 36, 0.08);
+  }
+
+  .simplebar-scrollbar::before{
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: 40px;
+    width: 5px;
+    background: var(--dark-color)
+  }
+}
+
+.tabs {
+  &__menu {
+    border-bottom: 1px solid rgba(20, 16, 36, 0.11);
+    padding-bottom: 20px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70%;
+
+    @include small-tablet {
+      max-width: 85%;
+    }
+
+    @include mobile {
+      // flex-direction: column;
+      // justify-content: center;
+      max-width: 100%;
+    }
+
+
+    &-btn {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 160%;
+      color: var(--dark-color);
+
+      @include mobile {
+        font-size: 16px;
+      }
+
+      &:focus {
+        color: var(--accent-color);
+        background-color: transparent;
+      }
+
+      &--active {
+        outline: none;
+        color: var(--accent-color);
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+

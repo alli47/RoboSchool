@@ -2,4 +2,8 @@
     font-weight: 600;
     font-size: 30px;
     color: #FFFFFF;
+
+    @include mobile {
+      font-size: 16px;
+    }
 }

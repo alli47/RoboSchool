@@ -1,37 +1,115 @@
 .hero {
-    padding-top: 250px;
-    padding-top: 160px;
-    min-height: 800px;
-    background-color: var(--dark-color);
+  padding-top: 160px;
+  min-height: 800px;
+  background-color: var(--dark-color);
 
-    &__container {
-        @include flex-v-center;
+  &__container {
+    @include flex-v-center;
+  }
+
+  &__content {
+    max-width: 516px;
+  }
+
+  &__image {
+    transform: translateX(150px);
+
+    @include high-tablet {
+      transform: translateX(50px);
     }
 
-    &__content {
-        max-width: 516px;
+    @include mobile {
+      display: block;
+      position: absolute;
+      width: 273px;
+      height: 320px;
+      // left: 24px;
+      top: 258px;
+      // top:50%;
+      left:50%;
+      transform: translate(-50%);
+      // transform: translateX(0);
+      z-index: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 70px;
+    text-transform: uppercase;
+    line-height: 160%;
+    color: var(--light-color);
+
+    @include high-desktop {
+      font-size: 66px;
     }
 
-    &__image {
-      transform: translateX(150px);
+
+    @include tablet {
+      font-size: 60px;
     }
 
-    &__title {
-        margin: 0;
-        margin-bottom: 50px;
-        font-weight: 600;
-        font-size: 70px;
-        text-transform: uppercase;
-        line-height: 160%;
-        color: var(--light-color);
-        &-text {
-            display: block;
-            max-width: 90%;
-            margin-top: 20px;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 160%;
-            text-transform: initial;
-        }
+    @include high-tablet {
+      font-size: 40px;
     }
+
+    @include mobile {
+      text-align: center;
+      font-size: 30px;
+    }
+
+
+    &-text {
+      display: block;
+      max-width: 90%;
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 160%;
+      text-transform: initial;
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include high-tablet {
+        font-size: 15px;
+        max-width: 100%;
+      }
+
+      @include mobile {
+        font-size: 16px;
+        margin-top: 10px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  &__link {
+
+    @include mobile {
+
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    left: 50%;
+    top: 520px;
+    transform: translate(-50%);
+    z-index: 1;
+    }
+  }
+
+  @include high-desktop {
+    min-height: auto;
+  }
+
+  @include tablet {
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    min-height: 617px;
+  }
 }
